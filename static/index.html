@@ -7,6 +7,50 @@
   <title>Document</title>
 </head>
 <body>
-  this is a doc
+  <!-- 
+    Here are the list of features:
+    * a form to add a new todo
+    * a list of todos
+    * a form to change a todo
+    * a form to delete a todo
+
+    Notes:
+    * the "change todo" button will have a drop down to select which todo to change
+    * the "delete todo" button will have a drop down to select which todo to change
+    * the "add todo" button will have a drop down to select which todo to change
+    * the "add a new todo" form will only have an input element and a submit button
+  -->
+
+  <!--
+    The add-new todo form
+  -->
+  <form id="add-todo">
+    <input type="text" placeholder="Enter new todo" id="new-todo"/>
+    <button type="submit">Add todo</button>
+  </form>
+
+  <!--
+    The list of todos
+  -->
+  <ul id="list"></ul>
+
+  <!--
+    The form to modify a todo
+  -->
+  <form id="change-todo">
+    <select id="todo-pos"></select>
+    <input type="text" placeholder="Enter new todo" id="new-todo-change" />
+    <button type="submit">Change todo</button>
+  </form>
+
+  <!--
+    The form to delete a todo
+  -->
+  <form id="delete-todo">
+    <select id="del-todo-pos"></select>
+    <button type="submit">Delete todo</button>
+  </form>
+
+  <script src="script.js"></script>
 </body>
 </html>
