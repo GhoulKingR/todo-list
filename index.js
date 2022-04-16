@@ -12,8 +12,6 @@ let todos = [];   // handles all the todos
   1. return all the todos
 */
 app.get("/api/todos", (req, res) => {
-
-  // 1
   res.send(todos);
 });
 
@@ -26,18 +24,10 @@ app.get("/api/todos", (req, res) => {
   4. return the created todo and index
 */
 app.post("/api/todos", (req, res) => {
-
-  // 1.
   let { todo } = req.body;
-
-  // 2.
   todos.push(todo);
-
-  // 3.
   let index = todos.length;
-
-  // 4.
-  res.send({ todo, index });            // shortcut for: { todo: todo, index: index }
+  res.send({ todo, index });            // { todo: todo, index: index }
 });
 
 /*
@@ -49,17 +39,10 @@ app.post("/api/todos", (req, res) => {
   4. return changed todo and index
 */
 app.put("/api/todos/:index", (req, res) => {
-  // 1.
-  let { index } = req.params;           // same as: let index = req.params.index;
-
-  // 2.
+  let { index } = req.params;         // index = req.params.index;
   let { todo } = req.body;
-
-  // 3.
   todos[index - 1] = todo;            // "index" parameter is 1-index by convention
-
-  // 4.
-  res.send({ todo, index });            // shortcut for: { todo: todo, index: index }
+  res.send({ todo, index });          // { todo: todo, index: index }
 
 });
 
@@ -74,25 +57,16 @@ app.put("/api/todos/:index", (req, res) => {
   6. return the deleted to do and the index
 */
 app.delete("/api/todos/:index", (req, res) => {
-  // 1.
   let { index } = req.params;
-
-  // 2.
   let todo = todos[index - 1]       // "index" parameter is 1-index by convention
-
-  // 3.
   delete todos[index - 1];
 
-  // 4.
   for (let i = index - 1; i < todos.length - 1; i++) {
     todos[i] = todos[i + 1];
   }
-
-  // 5.
+  
   todos.pop();
-
-  // 6. 
-  res.send({ todo, index });        // shortcut for: { todo: todo, index: index }
+  res.send({ todo, index });        // { todo: todo, index: index }
 })
 
 app.listen(8000, () => console.log('listening on port 8000...'))    // setup listener
