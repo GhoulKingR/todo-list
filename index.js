@@ -1,9 +1,10 @@
 const express = require('express');
 const app = express();
 
-app.use(express.json());    // add JSON express middleware
-
+app.use(express.json());    // adds JSON express middleware
+app.use(express.static('/static'));   // adds static hosting for 'static' folder
 let todos = [];   // handles all the todos
+
 
 /*
   -------------------- get all todos -------------------------
