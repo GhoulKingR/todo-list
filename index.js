@@ -46,7 +46,6 @@ app.post("/api/todos", (req, res) => {
   2. destructure the item from the response
   3. replace the todo at index
   4. return changed todo and index
-
 */
 app.get("/api/todos/:index", (req, res) => {
   // 1.
