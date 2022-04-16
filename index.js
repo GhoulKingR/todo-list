@@ -93,3 +93,5 @@ app.post("/api/todos/:index", (req, res) => {
   // 6. 
   res.send({ todo, index });        // shortcut for: { todo: todo, index: index }
 })
+
+app.listen(8000, () => console.log('listening on port 8000...'))    // setup listener
