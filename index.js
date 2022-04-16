@@ -47,7 +47,7 @@ app.post("/api/todos", (req, res) => {
   3. replace the todo at index
   4. return changed todo and index
 */
-app.get("/api/todos/:index", (req, res) => {
+app.put("/api/todos/:index", (req, res) => {
   // 1.
   let { index } = req.params;           // same as: let index = req.params.index;
 
@@ -72,7 +72,7 @@ app.get("/api/todos/:index", (req, res) => {
   5. pop the last item
   6. return the deleted to do and the index
 */
-app.post("/api/todos/:index", (req, res) => {
+app.delete("/api/todos/:index", (req, res) => {
   // 1.
   let { index } = req.params;
 
