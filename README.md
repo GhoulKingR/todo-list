@@ -14,4 +14,4 @@ The following are features of the backend:
 * there will be general list of items
 * there are no accounts
 
-The data handling will be done with JSON
+The data handling will be done with JSON, and the todo will be an array of strings
