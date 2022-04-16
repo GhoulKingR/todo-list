@@ -13,3 +13,5 @@ The APIs used here will be the following:
 The following are features of the backend:
 * there will be general list of items
 * there are no accounts
+
+The data handling will be done with JSON
